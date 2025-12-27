@@ -28,6 +28,28 @@ Para mantener un ambiente sano y respetuoso, te pedimos tener en cuenta lo sigui
 
 ---
 
+## 📺 Uso de contenido multimedia
+
+Este proyecto incluye reproductores embebidos (iframes) que enlazan a contenido publicado en **YouTube**.
+
+Los videos mostrados:
+- Pertenecen a sus respectivos autores y canales.
+- Se encuentran disponibles públicamente en la plataforma de YouTube.
+- No son almacenados, modificados ni redistribuidos por este proyecto.
+
+El uso de estos enlaces tiene fines informativos y espirituales, respetando los derechos de autor y las políticas de uso de cada plataforma.
+
+En caso de que algún contenido deje de estar disponible, el reproductor simplemente dejará de mostrarse sin afectar el funcionamiento del sitio.
+
+---
+
+## ⚖️ Aviso de derechos de autor
+
+Todo el contenido multimedia enlazado mantiene sus derechos originales.  
+Este proyecto no reclama propiedad sobre dichos materiales ni obtiene beneficio comercial de ellos.
+
+---
+
 ## 🙏 Mensaje final
 
 Esperamos que este contenido sea de bendición para tu vida  
