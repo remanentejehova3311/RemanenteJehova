@@ -1,0 +1,15 @@
+#contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-imagenes img {
+  width: 25%;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+#contenedor-imagenes img:last-child {
+  margin-right: 0;
+}

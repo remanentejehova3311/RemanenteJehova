@@ -1,0 +1,57 @@
+/* ===== CONTENEDORES DE IMÁGENES ===== */
+
+.contenedor-superior,
+.contenedor-medio,
+.contenedor-inferior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Espaciado general */
+.contenedor-superior {
+  margin-bottom: 30px;
+}
+
+.contenedor-medio {
+  margin: 30px 0;
+}
+
+.contenedor-inferior {
+  margin: 30px 0 40px;
+}
+
+/* ===== IMÁGENES ===== */
+
+.contenedor-superior img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.contenedor-medio img,
+.contenedor-inferior img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+/* ===== TEXTO ===== */
+
+.content > p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* ===== VIDEO ===== */
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.video iframe {
+  width: 90%;
+  max-width: 1000px;
+  height: 350px;
+  border-radius: 10px;
+}

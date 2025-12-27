@@ -1,0 +1,41 @@
+/* Contenedor superior */
+#contenedor-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Espacio entre las secciones superior e inferior */
+}
+
+/* Contenedor inferior */
+#contenedor-inferior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Establecer el ancho proporcional en ambos contenedores */
+#contenedor-superior img,
+#contenedor-inferior img {
+  width: 30%; /* Puedes ajustar el valor para lograr la proporción deseada */
+  margin: 0 20px; /* Margen horizontal entre las imágenes */
+}
+
+/* Eliminar el margen derecho de la última imagen en ambos contenedores */
+#contenedor-superior img:last-child,
+#contenedor-inferior img:last-child {
+  margin-right: 0;
+}
+
+.principal__card__imagen {
+  margin-top: 2rem;
+  margin-left: 18rem;
+  grid-area: card-imagem;
+  height: 100%;
+  width: 40%;
+  border-top-right-radius: 50px 100px;
+  border-bottom-left-radius: 50px 100px;
+}
+
+.video {
+  margin-left: 13rem;
+}

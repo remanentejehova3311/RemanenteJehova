@@ -1,0 +1,8 @@
+.principal__card___imagen {
+  margin-left: 12rem;
+  grid-area: card-imagem;
+  height: 100%;
+  width: 60%;
+  border-top-left-radius: 50px 100px;
+  border-bottom-right-radius: 50px 100px;
+}

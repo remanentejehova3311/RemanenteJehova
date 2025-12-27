@@ -1,0 +1,33 @@
+#contenedor-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#contenedor-medio,
+#contenedor-inferior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedor-superior img
+ {
+  width: 30%;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+
+#contenedor-medio img,
+#contenedor-inferior img {
+  width: 40%;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+
+#contenedor-superior img:last-child,
+#contenedor-medio img:last-child,
+#contenedor-inferior img:last-child {
+  margin-right: 0;
+}
