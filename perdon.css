@@ -1,7 +1,11 @@
 .container__images {
   display: flex;
-  width: 70vw;
-  margin-left: 13rem;
+  width: min(90vw, 1100px);
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 0;
 }
 
 .panel {

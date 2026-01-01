@@ -43,3 +43,15 @@
     justify-content: space-between;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+  .principal {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .principal__card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
