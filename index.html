@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Bienvenida | Remanente de Jehová</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="multimedia/cielo.png" />
-  <title>Bienvenida</title>
 </head>
 
 <body>
+
+  <!-- CONTENEDOR ANIMADO -->
   <div class="container">
+
+    <!-- CÍRCULO -->
     <div class="circle-container">
       <div class="circle">
         <button id="close">
@@ -25,52 +26,66 @@
         </button>
       </div>
     </div>
-    <img src="multimedia/El Remanente de Jehová.png" alt="El Remanente de Jehová" />
-    <div class="content">
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+      <!-- IMAGEN SIMBÓLICA -->
+      <figure class="imagen-principal">
+        <img src="multimedia/El Remanente de Jehová.png" alt="El Remanente de Jehová" />
+      </figure>
+
       <h1>Bienvenido(a)</h1>
+
       <p>
-        Es un gusto tenerte aquí, espero que este contenido sea de gran
-        alimento espiritual para ti y que Dios se manifieste en tu vida de una
-        manera sobrenatural y muy especial.
+        Es un gusto tenerte aquí. Espero que este contenido sea de gran alimento
+        espiritual para ti y que Dios se manifieste en tu vida de una manera
+        sobrenatural y muy especial.
       </p>
+
       <p>
-        Para que puedas disfrutar de la lectura e interactuar de manera libre,
-        ten en cuenta las siguientes indicaciones:
+        Este espacio ha sido creado con respeto, sobriedad y discernimiento,
+        procurando que cada lectura se dé en un ambiente de paz y reflexión.
       </p>
+
+      <p>
+        Para que la experiencia sea edificante para todos, te invito a tener en
+        cuenta las siguientes indicaciones:
+      </p>
+
       <ul>
-        <li>1. &nbsp;Se amable y cordial.</li>
-        <li>2. &nbsp;No hagas bullying ni uses lenguaje ofensivo.</li>
-        <li>3. &nbsp;No publiques promociones ni spam.</li>
-        <li>4. &nbsp;Respeta la privacidad de los demás.</li>
+        <li>Ser amable y cordial.</li>
+        <li>No hacer bullying ni usar lenguaje ofensivo.</li>
+        <li>No publicar promociones ni spam.</li>
+        <li>Respetar la privacidad de los demás.</li>
+        <li>Respetar la fe que profesa cada miembro de la comunidad.</li>
         <li>
-          5. &nbsp;Respeta la fe que profesa cada miembro de la comunidad.
-        </li>
-        <li>
-          6. &nbsp;Si no te interesa este tipo de contenido, amablemente te
-          invito a que cierres la página.
+          Si este contenido no es de tu interés, te invito con respeto a cerrar
+          la página.
         </li>
       </ul>
-      <p>Dios te bendiga en gran manera.</p>
-    </div>
+
+      <p>
+        Que este espacio sea de bendición para tu vida y que todo lo aquí
+        compartido conduzca a una reflexión sincera delante de Dios.
+      </p>
+
+      <p class="cierre">
+        Dios te bendiga en gran manera.
+      </p>
+
+    </main>
   </div>
-  <nav>
-    <ul>
-      <li><i class="fas fa-home"></i><a href="index.html">Bienvenida</a></li>
-      <li>
-        <i class="fas fa-archive"></i><a href="contenido.html">Contenido</a>
-      </li>
-      <li>
-        <i class="fas fa-user-alt"></i><a href="acercade.html">Acerca de</a>
-      </li>
-      <li>
-        <i class="fas fa-envelope"></i><a href="contacto.html">Contacto</a>
-      </li>
-    </ul>
-  </nav>
+
+  <!-- MENÚ -->
+  <div id="menu-container"></div>
+
   <footer>
-    Copyright &copy; 2023 Remanente de Jehová. Todos los Derechos Reservados.
+    <p>© 2023 Remanente de Jehová. Todos los derechos reservados.</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="js/menu.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

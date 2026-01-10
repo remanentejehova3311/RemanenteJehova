@@ -1,0 +1,69 @@
+
+/* Estilos para la imagen principal (corregido el nombre de clase) */
+.principal__card___imagen {
+  margin: 0 auto; /* Centrado, sin margin-left fijo */
+  grid-area: card-imagem;
+  height: auto; /* Cambia a auto para responsividad */
+  width: auto; /* Cambia a auto para usar tamaño natural limitado por max-width */
+  max-width: 400px; /* Aumentado a 400px para probar */
+  border-radius: 15px; /* Simplificado, consistente con style.css */
+  display: block; /* Para centrar */
+  object-fit: contain; /* Mantiene proporción sin distorsión */
+}
+
+/* Contenedor de imágenes (carrusel) */
+.container__images {
+  display: flex;
+  width: 100%; /* Cambia a 100% para responsividad */
+  max-width: 760px; /* Consistente con .content en style.css */
+  margin: 0 auto; /* Centrado */
+  padding: 0 20px; /* Padding flexible como en .container */
+}
+
+/* Paneles del carrusel */
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh; /* Reducido para mejor fit, ajustable */
+  border-radius: 15px; /* Consistente con imágenes en style.css */
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 0.5s ease-in; /* Consistente con style.css */
+}
+
+.panel.active {
+  flex: 5;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* Media queries actualizadas para consistencia */
+@media (max-width: 768px) {
+  .container__images {
+    flex-direction: column; /* Apila en móviles */
+    width: 100%;
+  }
+
+  .panel {
+    height: 40vh; /* Ajusta altura */
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .principal__card___imagen {
+    max-width: 300px; /* Ajustado para móviles */
+  }
+
+  .panel {
+    height: 30vh;
+  }
+}

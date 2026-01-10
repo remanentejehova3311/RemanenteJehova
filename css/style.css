@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+/* ========================================
+   RESET Y ESTILOS GLOBALES
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+======================================== */
+
+/* CONTENEDOR */
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s ease-in-out;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container.show-nav {
+  transform: rotate(-15deg);
+}
+
+/* CÍRCULO */
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #860b9e;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 60px;
+  color: #333;
+}
+
+/* IMAGEN */
+.imagen-principal {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.imagen-principal img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* TEXTO */
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+ul {
+  margin: 2rem 0 3rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.cierre {
+  text-align: center;
+  font-style: italic;
+}
+
+/* ========================================
+   NAVEGACIÓN
+======================================== */
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 30px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+nav ul li+li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li+li+li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav ul li+li+li+li {
+  margin-left: 50px;
+  transform: translateX(-250%);
+}
+
+.container.show-nav+#menu-container nav li {
+  transform: translateX(0);
+}
+
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #ff7979;
+  font-weight: bold;
+}
+
+nav i {
+  margin-right: 10px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  text-align: center;
+  color: #ddd;
+  padding: 30px 20px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .container.show-nav {
+    transform: rotate(-10deg);
+  }
+
+  .content {
+    padding-top: 40px;
+  }
+
+  .imagen-principal img {
+    max-width: 240px;
+  }
+}
