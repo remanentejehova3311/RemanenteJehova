@@ -1,33 +1,75 @@
-#contenedor-superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
+/* ==============================
+   CONTENEDORES DE IMÁGENES
+================================ */
 
+#contenedor-superior,
 #contenedor-medio,
 #contenedor-inferior {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  margin: 40px 0;
 }
 
-#contenedor-superior img
- {
-  width: 30%;
-  margin: 0 5px;
-  border-radius: 10px;
-}
-
+#contenedor-superior img,
 #contenedor-medio img,
 #contenedor-inferior img {
-  width: 40%;
-  margin: 0 5px;
-  border-radius: 10px;
+  width: 45%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 14px;
 }
 
-#contenedor-superior img:last-child,
-#contenedor-medio img:last-child,
-#contenedor-inferior img:last-child {
-  margin-right: 0;
+
+/* ==============================
+   LISTA
+================================ */
+
+.content ul {
+  margin: 20px 0 30px 40px;
+  line-height: 1.6;
+}
+
+
+/* ==============================
+   VIDEOS
+================================ */
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.video iframe {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  #contenedor-superior,
+  #contenedor-medio,
+  #contenedor-inferior {
+    flex-direction: column;
+  }
+
+  #contenedor-superior img,
+  #contenedor-medio img,
+  #contenedor-inferior img {
+    width: 90%;
+    max-width: none;
+  }
+
+  .video iframe {
+    width: 95%;
+  }
 }

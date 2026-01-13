@@ -1,41 +1,93 @@
-/* Contenedor superior */
-#contenedor-superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px; /* Espacio entre las secciones superior e inferior */
-}
+/* =========================
+   CONTENEDORES DE IMÁGENES
+========================= */
 
-/* Contenedor inferior */
+/* Contenedores superior e inferior */
+#contenedor-superior,
 #contenedor-inferior {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
 }
 
-/* Establecer el ancho proporcional en ambos contenedores */
+/* Imágenes de los versículos */
 #contenedor-superior img,
 #contenedor-inferior img {
-  width: 30%; /* Puedes ajustar el valor para lograr la proporción deseada */
-  margin: 0 20px; /* Margen horizontal entre las imágenes */
+  width: 30%;
+  max-width: 320px;
+  min-width: 220px;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* Eliminar el margen derecho de la última imagen en ambos contenedores */
-#contenedor-superior img:last-child,
-#contenedor-inferior img:last-child {
-  margin-right: 0;
-}
+
+/* =========================
+   IMAGEN PRINCIPAL
+========================= */
 
 .principal__card__imagen {
-  margin-top: 2rem;
-  margin-left: 18rem;
-  grid-area: card-imagem;
-  height: 100%;
-  width: 40%;
+  display: block;
+  width: 42%;
+  max-width: 500px;
+  margin: 3rem auto;
+  height: auto;
   border-top-right-radius: 50px 100px;
   border-bottom-left-radius: 50px 100px;
 }
 
+
+/* =========================
+   VIDEO
+========================= */
+
 .video {
-  margin-left: 13rem;
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.video iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* =========================
+   LISTAS (AUTOCONCEPTO)
+========================= */
+
+.content ol {
+  margin: 1.5rem auto;
+  padding-left: 2rem;
+  max-width: 800px;
+}
+
+.content ol li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  #contenedor-superior img,
+  #contenedor-inferior img {
+    width: 90%;
+    max-width: none;
+  }
+
+  .principal__card__imagen {
+    width: 90%;
+  }
+
+  .video iframe {
+    max-width: 100%;
+  }
 }

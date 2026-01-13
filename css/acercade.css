@@ -1,69 +1,78 @@
+/* ========================================
+   CONTENIDO GENERAL
+======================================== */
 
-/* Estilos para la imagen principal (corregido el nombre de clase) */
-.principal__card___imagen {
-  margin: 0 auto; /* Centrado, sin margin-left fijo */
-  grid-area: card-imagem;
-  height: auto; /* Cambia a auto para responsividad */
-  width: auto; /* Cambia a auto para usar tamaño natural limitado por max-width */
-  max-width: 400px; /* Aumentado a 400px para probar */
-  border-radius: 15px; /* Simplificado, consistente con style.css */
-  display: block; /* Para centrar */
-  object-fit: contain; /* Mantiene proporción sin distorsión */
+.content>p {
+  margin: 20px 0;
+  line-height: 1.6;
 }
 
-/* Contenedor de imágenes (carrusel) */
+/* ========================================
+   IMAGEN PRINCIPAL
+======================================== */
+
+.principal__card___imagen {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+}
+
+/* ========================================
+   CARRUSEL DE IMÁGENES
+======================================== */
+
 .container__images {
   display: flex;
-  width: 100%; /* Cambia a 100% para responsividad */
-  max-width: 760px; /* Consistente con .content en style.css */
-  margin: 0 auto; /* Centrado */
-  padding: 0 20px; /* Padding flexible como en .container */
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* Paneles del carrusel */
 .panel {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 60vh; /* Reducido para mejor fit, ajustable */
-  border-radius: 15px; /* Consistente con imágenes en style.css */
-  color: #fff;
+  height: 55vh;
+  border-radius: 16px;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
-  position: relative;
-  transition: all 0.5s ease-in; /* Consistente con style.css */
+  transition: flex 0.5s ease-in;
 }
 
 .panel.active {
   flex: 5;
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
 }
 
-/* Media queries actualizadas para consistencia */
+/* ========================================
+   RESPONSIVE
+======================================== */
+
 @media (max-width: 768px) {
   .container__images {
-    flex-direction: column; /* Apila en móviles */
-    width: 100%;
+    flex-direction: column;
   }
 
   .panel {
-    height: 40vh; /* Ajusta altura */
+    height: 35vh;
   }
 
   .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
+  .panel:nth-of-type(5),
+  .panel:nth-of-type(6) {
     display: none;
   }
 }
 
 @media (max-width: 480px) {
   .principal__card___imagen {
-    max-width: 300px; /* Ajustado para móviles */
+    max-width: 300px;
   }
 
   .panel {
-    height: 30vh;
+    height: 28vh;
   }
 }
