@@ -224,16 +224,22 @@ footer {
    RESPONSIVE
 ======================================== */
 
+/* ========================================
+   FIX MENÚ MÓVIL (NO TAPAR FOOTER)
+======================================== */
+
 @media (max-width: 768px) {
-  .container.show-nav {
-    transform: rotate(-10deg);
+
+  nav {
+    top: 0;
+    bottom: auto;
+    height: 100vh;
+    padding-top: 140px; /* espacio para el círculo */
+    overflow-y: auto;   /* 🔑 CLAVE */
+    overscroll-behavior: contain;
   }
 
-  .content {
-    padding-top: 40px;
-  }
-
-  .imagen-principal img {
-    max-width: 240px;
+  nav ul {
+    padding-bottom: 80px; /* aire para que no quede pegado */
   }
 }

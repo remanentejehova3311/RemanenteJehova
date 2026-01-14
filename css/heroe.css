@@ -1,6 +1,39 @@
 /* =========================
+   CONTENEDORES DE IMÁGENES
+========================= */
+
+#contenedor-superior,
+#contenedor-medio,
+#contenedor-inferior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+/* UNA SOLA IMAGEN (imagen protagonista) */
+#contenedor-superior img,
+#contenedor-medio img:only-child {
+  width: 60%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* DOS IMÁGENES JUNTAS */
+#contenedor-medio img:not(:only-child),
+#contenedor-inferior img {
+  width: 42%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+/* =========================
    VIDEOS
-   ========================= */
+========================= */
 
 .video {
   display: flex;
@@ -8,6 +41,7 @@
   margin: 2.5rem 0;
 }
 
+/* Video embebido (cuando YouTube lo permite) */
 .video iframe {
   width: 70%;
   max-width: 900px;
@@ -16,6 +50,7 @@
   border-radius: 12px;
 }
 
+/* Enlace cuando el video NO permite embed */
 .video-link {
   text-align: center;
   padding: 2rem 2.5rem;
@@ -38,49 +73,10 @@
   text-decoration: underline;
 }
 
-/* =========================
-   CONTENEDORES DE IMÁGENES
-   ========================= */
-
-#contenedor-medio,
-#contenedor-inferior {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin: 2.5rem 0;
-}
-
-#contenedor-medio img {
-  width: 50%;
-  max-width: 650px;
-  border-radius: 12px;
-}
-
-#contenedor-inferior img {
-  width: 40%;
-  min-width: 300px;
-  border-radius: 12px;
-}
-
-#contenedor-superior {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2.5rem 0;
-}
-
-#contenedor-superior img {
-  width: 50%;
-  /* tamaño proporcional */
-  max-width: 650px;
-  /* no se desborde */
-  border-radius: 12px;
-}
 
 /* =========================
    LISTAS DENTRO DEL CONTENIDO
-   ========================= */
+========================= */
 
 .content ol,
 .content ul {
@@ -94,22 +90,27 @@
   line-height: 1.6;
 }
 
+
 /* =========================
    RESPONSIVE
-   ========================= */
+========================= */
 
 @media (max-width: 768px) {
 
-  .video iframe {
-    width: 95%;
+  #contenedor-superior,
+  #contenedor-medio,
+  #contenedor-inferior {
+    flex-direction: column;
   }
 
+  #contenedor-superior img,
   #contenedor-medio img,
   #contenedor-inferior img {
     width: 90%;
+    max-width: none;
   }
 
-  #contenedor-inferior {
-    flex-direction: column;
+  .video iframe {
+    width: 95%;
   }
 }
