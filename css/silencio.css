@@ -9,12 +9,16 @@
 }
 
 .video iframe {
-  width: 70%;
+  width: 100%;
   max-width: 900px;
   aspect-ratio: 16 / 9;
   height: auto;
   border-radius: 12px;
+
+  /* 🔑 CLAVE */
+  display: block;
 }
+
 
 .video-link {
   text-align: center;
