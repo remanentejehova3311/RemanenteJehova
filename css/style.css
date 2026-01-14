@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
 /* ========================================
    RESET Y ESTILOS GLOBALES
 ======================================== */
@@ -38,24 +39,32 @@ h2 {
    LAYOUT PRINCIPAL
 ======================================== */
 
-/* CONTENEDOR */
 .container {
   background-color: #fafafa;
   transform-origin: top left;
   transition: transform 0.5s ease-in-out;
   min-height: 100vh;
   padding: 40px 20px;
+
+  position: relative;
+  z-index: 1;
 }
 
 .container.show-nav {
   transform: rotate(-15deg);
 }
 
-/* CÍRCULO */
+/* ========================================
+   CÍRCULO / BOTÓN
+======================================== */
+
 .circle-container {
   position: fixed;
   top: -100px;
   left: -100px;
+  z-index: 1000;
+  /* 🔑 siempre arriba */
+  pointer-events: auto;
 }
 
 .circle {
@@ -65,6 +74,7 @@ h2 {
   border-radius: 50%;
   position: relative;
   transition: transform 0.5s linear;
+  pointer-events: auto;
 }
 
 .container.show-nav .circle {
@@ -81,6 +91,7 @@ h2 {
   border: 0;
   font-size: 26px;
   color: #fff;
+  pointer-events: auto;
 }
 
 .circle button:focus {
@@ -206,10 +217,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-nav i {
-  margin-right: 10px;
-}
-
 /* ========================================
    FOOTER
 ======================================== */
@@ -221,25 +228,20 @@ footer {
 }
 
 /* ========================================
-   RESPONSIVE
-======================================== */
-
-/* ========================================
-   FIX MENÚ MÓVIL (NO TAPAR FOOTER)
+   RESPONSIVE – FIX MENÚ MÓVIL
 ======================================== */
 
 @media (max-width: 768px) {
 
-  nav {
-    top: 0;
-    bottom: auto;
-    height: 100vh;
-    padding-top: 140px; /* espacio para el círculo */
-    overflow-y: auto;   /* 🔑 CLAVE */
-    overscroll-behavior: contain;
+  .container.show-nav {
+    transform: rotate(-10deg);
+    pointer-events: none;
+    /* 🔑 CLAVE */
   }
 
-  nav ul {
-    padding-bottom: 80px; /* aire para que no quede pegado */
+  .circle-container,
+  .circle,
+  .circle button {
+    pointer-events: auto;
   }
 }
