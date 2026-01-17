@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
 /* ========================================
    RESET Y ESTILOS GLOBALES
 ======================================== */
@@ -38,24 +39,31 @@ h2 {
    LAYOUT PRINCIPAL
 ======================================== */
 
-/* CONTENEDOR */
 .container {
   background-color: #fafafa;
   transform-origin: top left;
   transition: transform 0.5s ease-in-out;
   min-height: 100vh;
   padding: 40px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .container.show-nav {
   transform: rotate(-15deg);
 }
 
-/* CÍRCULO */
+/* ========================================
+   CÍRCULO / BOTÓN
+======================================== */
+
 .circle-container {
   position: fixed;
   top: -100px;
   left: -100px;
+  z-index: 1000;
+  /* siempre arriba */
+  pointer-events: auto;
 }
 
 .circle {
@@ -65,6 +73,7 @@ h2 {
   border-radius: 50%;
   position: relative;
   transition: transform 0.5s linear;
+  pointer-events: auto;
 }
 
 .container.show-nav .circle {
@@ -81,6 +90,7 @@ h2 {
   border: 0;
   font-size: 26px;
   color: #fff;
+  pointer-events: auto;
 }
 
 .circle button:focus {
@@ -108,7 +118,8 @@ h2 {
   color: #333;
 }
 
-/* IMAGEN */
+/* IMAGEN PRINCIPAL */
+
 .imagen-principal {
   text-align: center;
   margin-bottom: 3rem;
@@ -122,6 +133,7 @@ h2 {
 }
 
 /* TEXTO */
+
 h1 {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -206,10 +218,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-nav i {
-  margin-right: 10px;
-}
-
 /* ========================================
    FOOTER
 ======================================== */
@@ -221,25 +229,78 @@ footer {
 }
 
 /* ========================================
-   RESPONSIVE
-======================================== */
-
-/* ========================================
-   FIX MENÚ MÓVIL (NO TAPAR FOOTER)
+   RESPONSIVE – TABLET Y MÓVIL
 ======================================== */
 
 @media (max-width: 768px) {
 
+  /* rotación más suave */
+  .container.show-nav {
+    transform: rotate(-10deg);
+    pointer-events: none;
+    /* evita bloquear scroll */
+  }
+
+  /* mantener botón funcional */
+  .circle-container,
+  .circle,
+  .circle button {
+    pointer-events: auto;
+  }
+
+  /* menú ocupa toda la altura y puede scrollear */
   nav {
     top: 0;
     bottom: auto;
     height: 100vh;
-    padding-top: 140px; /* espacio para el círculo */
-    overflow-y: auto;   /* 🔑 CLAVE */
-    overscroll-behavior: contain;
+    padding-top: 140px;
+    overflow-y: auto;
   }
 
   nav ul {
-    padding-bottom: 80px; /* aire para que no quede pegado */
+    padding-bottom: 80px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE – MÓVIL PEQUEÑO
+======================================== */
+
+@media (max-width: 480px) {
+
+  .container.show-nav {
+    transform: rotate(-7deg);
+  }
+
+  .content {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  p,
+  li {
+    font-size: 14px;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  nav {
+    bottom: 20px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE – MUY PEQUEÑO
+======================================== */
+
+@media (max-width: 360px) {
+  .circle button {
+    font-size: 22px;
+    height: 80px;
+    width: 80px;
   }
 }
