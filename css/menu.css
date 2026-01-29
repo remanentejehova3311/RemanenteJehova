@@ -1,0 +1,123 @@
+/* ========================================
+   MENU – CIRCULO
+======================================== */
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 1200;
+}
+
+.circle {
+    background-color: #860b9e;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+/* Estado botones */
+#close {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-open #close {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-open #open {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ========================================
+   MENU – OFFCANVAS
+======================================== */
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 90px 20px 20px;
+}
+
+.offcanvas.active {
+    transform: translateX(0);
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.offcanvas-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.offcanvas-menu li {
+    margin: 18px 0;
+    text-transform: uppercase;
+}
+
+.offcanvas-menu a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.offcanvas-menu a:hover {
+    color: #ff7979;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 900;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
