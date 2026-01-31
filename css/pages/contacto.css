@@ -1,0 +1,102 @@
+/* ========================================
+   TEXTO GENERAL
+======================================== */
+
+.content > p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FORMULARIO DE CONTACTO
+======================================== */
+
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fafafa;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs y textarea */
+
+.input-padron {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.input-padron:focus {
+  outline: none;
+  border-color: #860b9e;
+  box-shadow: 0 0 6px rgba(134, 11, 158, 0.4);
+}
+
+/* Botón */
+
+.enviar {
+  width: 100%;
+  padding: 14px;
+  background-color: #860b9e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enviar:hover {
+  background-color: #6a0980;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  .input-padron {
+    font-size: 15px;
+  }
+
+  .enviar {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 18px;
+  }
+
+  .input-padron {
+    font-size: 14px;
+  }
+
+  .enviar {
+    font-size: 14px;
+  }
+}
