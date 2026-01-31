@@ -1,0 +1,78 @@
+/* ========================================
+   CONTENIDO GENERAL
+======================================== */
+
+.content>p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* ========================================
+   IMAGEN PRINCIPAL
+======================================== */
+
+.principal__card___imagen {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+}
+
+/* ========================================
+   CARRUSEL DE IMÁGENES
+======================================== */
+
+.container__images {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 55vh;
+  border-radius: 16px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  transition: flex 0.5s ease-in;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .container__images {
+    flex-direction: column;
+  }
+
+  .panel {
+    height: 35vh;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5),
+  .panel:nth-of-type(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .principal__card___imagen {
+    max-width: 300px;
+  }
+
+  .panel {
+    height: 28vh;
+  }
+}
