@@ -1,16 +1,8 @@
 /* ========================================
-   CONTENIDO GENERAL
+   ACERCA DE – ESTILOS EXCLUSIVOS
 ======================================== */
 
-.content>p {
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-/* ========================================
-   IMAGEN PRINCIPAL
-======================================== */
-
+/* Imagen principal */
 .principal__card___imagen {
   display: block;
   margin: 30px auto;
@@ -19,10 +11,7 @@
   border-radius: 14px;
 }
 
-/* ========================================
-   CARRUSEL DE IMÁGENES
-======================================== */
-
+/* Carrusel de imágenes */
 .container__images {
   display: flex;
   width: 100%;
@@ -47,10 +36,7 @@
   flex: 5;
 }
 
-/* ========================================
-   RESPONSIVE
-======================================== */
-
+/* Responsive específico */
 @media (max-width: 768px) {
   .container__images {
     flex-direction: column;

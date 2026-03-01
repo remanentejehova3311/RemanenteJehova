@@ -1,0 +1,83 @@
+/* ========================================
+   BLOQUES REUTILIZABLES
+   (videos, imágenes, texto común)
+======================================== */
+
+/* ---------- TEXTO DENTRO DEL CONTENIDO ---------- */
+
+.content > p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.content ul,
+.content ol {
+  padding-left: 2rem;
+  margin: 1.5rem 0;
+  list-style-position: outside;
+}
+
+.content li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* ---------- VIDEO ---------- */
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+/* Wrapper para evitar deformación de YouTube */
+.video-wrapper {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video iframe,
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ---------- CONTENEDOR DE IMÁGENES ---------- */
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.image-group img {
+  width: 45%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ---------- RESPONSIVE COMÚN ---------- */
+
+@media (max-width: 768px) {
+  .image-group {
+    flex-direction: column;
+  }
+
+  .image-group img {
+    width: 90%;
+    max-width: none;
+  }
+
+  .video-wrapper {
+    width: 95%;
+  }
+}

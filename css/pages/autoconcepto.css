@@ -1,8 +1,8 @@
-/* =========================
-   CONTENEDORES DE IMÁGENES
-========================= */
+/* ========================================
+   AUTOCONCEPTO – ESTILOS EXCLUSIVOS
+======================================== */
 
-/* Contenedores superior e inferior */
+/* Contenedores de imágenes */
 #contenedor-superior,
 #contenedor-inferior {
   display: flex;
@@ -13,7 +13,6 @@
   flex-wrap: wrap;
 }
 
-/* Imágenes de los versículos */
 #contenedor-superior img,
 #contenedor-inferior img {
   width: 30%;
@@ -23,11 +22,7 @@
   border-radius: 10px;
 }
 
-
-/* =========================
-   IMAGEN PRINCIPAL
-========================= */
-
+/* Imagen principal */
 .principal__card__imagen {
   display: block;
   width: 42%;
@@ -38,45 +33,8 @@
   border-bottom-left-radius: 50px 100px;
 }
 
-
-/* =========================
-   VIDEO
-========================= */
-
-.video {
-  display: flex;
-  justify-content: center;
-  margin: 3rem 0;
-}
-
-.video iframe {
-  width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-}
-
-/* =========================
-   LISTAS (AUTOCONCEPTO)
-========================= */
-
-.content ol {
-  margin: 1.5rem auto;
-  padding-left: 2rem;
-  max-width: 800px;
-}
-
-.content ol li {
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* Responsive específico */
 @media (max-width: 768px) {
-
   #contenedor-superior img,
   #contenedor-inferior img {
     width: 90%;
@@ -85,9 +43,5 @@
 
   .principal__card__imagen {
     width: 90%;
-  }
-
-  .video iframe {
-    max-width: 100%;
   }
 }
