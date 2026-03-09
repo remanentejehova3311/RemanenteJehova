@@ -22,7 +22,10 @@
   line-height: 1.6;
 }
 
-/* ---------- VIDEO ---------- */
+
+/* ========================================
+   VIDEO
+======================================== */
 
 .video {
   display: flex;
@@ -30,13 +33,14 @@
   margin: 2.5rem 0;
 }
 
-/* Wrapper para evitar deformación de YouTube */
+/* Wrapper para mantener proporción */
 .video-wrapper {
   width: 100%;
   max-width: 900px;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .video iframe,
@@ -48,7 +52,10 @@
   display: block;
 }
 
-/* ---------- CONTENEDOR DE IMÁGENES ---------- */
+
+/* ========================================
+   BLOQUE DE IMÁGENES
+======================================== */
 
 .image-group {
   display: flex;
@@ -56,18 +63,41 @@
   align-items: center;
   gap: 2rem;
   margin: 2.5rem 0;
+  flex-wrap: wrap;
 }
 
 .image-group img {
   width: 45%;
   max-width: 520px;
+  min-width: 220px;
   height: auto;
   border-radius: 12px;
 }
 
-/* ---------- RESPONSIVE COMÚN ---------- */
+
+/* ========================================
+   VARIANTES DE GRUPOS DE IMÁGENES
+======================================== */
+
+.image-group--two img {
+  width: 45%;
+}
+
+.image-group--three img {
+  width: 30%;
+}
+
+.image-group--single img {
+  width: 60%;
+}
+
+
+/* ========================================
+   RESPONSIVE COMÚN
+======================================== */
 
 @media (max-width: 768px) {
+
   .image-group {
     flex-direction: column;
   }
@@ -80,4 +110,5 @@
   .video-wrapper {
     width: 95%;
   }
+
 }
