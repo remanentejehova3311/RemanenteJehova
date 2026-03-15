@@ -1,0 +1,23 @@
+/* ========================================
+   AUTOCONCEPTO – ESTILOS EXCLUSIVOS
+======================================== */
+
+/* Imagen principal */
+.principal__card__imagen {
+  display: block;
+  width: 42%;
+  max-width: 500px;
+  margin: 3rem auto;
+  height: auto;
+  border-top-right-radius: 50px 100px;
+  border-bottom-left-radius: 50px 100px;
+}
+
+/* Responsive específico */
+@media (max-width: 768px) {
+
+  .principal__card__imagen {
+    width: 90%;
+  }
+
+}

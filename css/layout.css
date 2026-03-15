@@ -1,0 +1,30 @@
+/* ========================================
+   LAYOUT GLOBAL
+======================================== */
+
+.container {
+    background-color: #fafafa;
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 20px 0;
+    color: #333;
+}
+
+/* Espaciado consistente */
+.content > * + * {
+    margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #ddd;
+    padding: 30px 20px;
+}
