@@ -3,9 +3,16 @@
    (videos, imágenes, texto común)
 ======================================== */
 
+
+/* ========================================
+   CONTENIDO GENERAL
+   (mejora de lectura)
+======================================== */
+
+
 /* ---------- TEXTO DENTRO DEL CONTENIDO ---------- */
 
-.content > p {
+.content>p {
   margin: 20px 0;
   line-height: 1.6;
 }
@@ -62,16 +69,17 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin: 2.5rem 0;
+  margin: 3rem 0;
   flex-wrap: wrap;
 }
 
 .image-group img {
-  width: 45%;
-  max-width: 520px;
-  min-width: 220px;
+  width: 100%;
+  max-width: 420px;
   height: auto;
   border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 
@@ -79,16 +87,16 @@
    VARIANTES DE GRUPOS DE IMÁGENES
 ======================================== */
 
+.image-group--single img {
+  width: 60%;
+}
+
 .image-group--two img {
   width: 45%;
 }
 
 .image-group--three img {
   width: 30%;
-}
-
-.image-group--single img {
-  width: 60%;
 }
 
 
