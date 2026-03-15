@@ -1,0 +1,25 @@
+/* ========================================
+   RESPONSIVE GLOBAL
+======================================== */
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    p,
+    li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .circle button {
+        font-size: 22px;
+        height: 80px;
+        width: 80px;
+    }
+}

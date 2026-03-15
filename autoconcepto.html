@@ -8,8 +8,9 @@
   <meta name="description"
     content="Blog cristiano del Remanente de Jehová con reflexiones bíblicas, estudios de la Palabra y mensajes de edificación espiritual.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/autoconcepto.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/blocks.css">
+  <link rel="stylesheet" href="css/pages/autoconcepto.css">
   <link rel="icon" href="multimedia/cielo.png" />
 </head>
 
@@ -69,20 +70,20 @@
 
       <!--5 Imágenes Proverbios 19:8 Proverbios 29:23 Isaías 43:4 Romanos 12:3
         Filipenses 2:3-4-->
-      <div id="contenedor-superior">
+      <div class="image-group image-group--three">
         <img src="multimedia/Proverbios 19_8.png" alt="Proverbios 19:8" />
         <img src="multimedia/Proverbios 29_23.png" alt="Proverbios 29:23" />
         <img src="multimedia/Isaías 43_4.png" alt="Isaías 43:4" />
       </div>
 
-      <div id="contenedor-inferior">
+      <div class="image-group image-group--two">
         <img src="multimedia/Romanos 12_3.png" alt="Romanos 12:3" />
         <img src="multimedia/Filipenses 2_3-4.png" alt="Filipenses 2:3-4" />
       </div>
 
       <!--Imagen de Software Redil no tengas un concepto de ti-->
-      <div>
-        <img class="principal__card__imagen" src="multimedia/No tengas un concepto de ti.png" />
+      <div class="image-group image-group--single">
+        <img src="multimedia/No tengas un concepto de ti.png" alt="No tengas un concepto de ti">
       </div>
 
       <p>
@@ -107,10 +108,12 @@
 
       <!--Canción Quiero conocer a Jesús de GDS Band-->
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/PnFAOvhpILU" title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/PnFAOvhpILU" title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            loading="lazy" allowfullscreen>
+          </iframe>
+        </div>
       </div>
 
     </main>
