@@ -1,0 +1,5 @@
+/* main.css — NUEVA ARQUITECTURA */
+@import "./base.css";
+@import "./layout.css";
+@import "./menu.css";
+@import "./components.css";
