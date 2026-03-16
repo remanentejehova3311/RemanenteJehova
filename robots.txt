@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://remanentejehova3311.github.io/RemanenteJehova/sitemap.xml
