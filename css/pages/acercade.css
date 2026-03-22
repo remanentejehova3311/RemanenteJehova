@@ -11,45 +11,53 @@
   border-radius: 14px;
 }
 
-/* Carrusel de imágenes */
+/* ========================================
+   CARRUSEL (MEJORADO)
+======================================== */
+
 .container__images {
   display: flex;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 .panel {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  height: 55vh;
-  border-radius: 16px;
+  height: 70vh;
+  border-radius: 22px;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
-  transition: flex 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
 }
 
+/* Panel activo */
 .panel.active {
   flex: 5;
-  display: block !important;
+  background-size: contain;
+  background-color: #1e0f3a;
 }
 
-/* Responsive específico */
+/* ========================================
+   RESPONSIVE
+======================================== */
+
 @media (max-width: 768px) {
   .container__images {
     flex-direction: column;
   }
 
   .panel {
-    height: 35vh;
+    height: 50vh;
+    background-position: center center;
   }
 
   .panel:nth-of-type(4),
-  .panel:nth-of-type(5),
-  .panel:nth-of-type(6) {
+  .panel:nth-of-type(5) {
     display: none;
   }
 }
@@ -60,6 +68,6 @@
   }
 
   .panel {
-    height: 28vh;
+    height: 40vh;
   }
 }
