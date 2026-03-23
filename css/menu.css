@@ -4,9 +4,9 @@
 
 .circle-container {
     position: fixed;
-    top: -100px;
-    left: -100px;
-    z-index: 1200;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
 }
 
 .circle {
