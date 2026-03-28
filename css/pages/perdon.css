@@ -34,23 +34,37 @@
 ======================================== */
 
 @media (max-width: 768px) {
+
   .container__images {
-    flex-direction: column;
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 15px;
+    scroll-snap-type: x mandatory;
   }
 
   .panel {
-    height: 50vh;
-    background-position: center center;
+    flex: 0 0 85%;
+    height: 240px;
+    margin: 0;
+    border-radius: 16px;
+
+    scroll-snap-align: center;
+
+    flex-grow: 0 !important;
+
+    opacity: 0.5;
+    transform: scale(0.92);
+    transition: all 0.3s ease;
   }
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
+  .panel.active {
+    flex: 0 0 85% !important;
   }
-}
 
-@media (max-width: 480px) {
-  .panel {
-    height: 40vh;
+  .panel.active-mobile {
+    opacity: 1;
+    transform: scale(1);
   }
+
 }

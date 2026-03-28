@@ -3,7 +3,9 @@
 ======================================== */
 
 .imagen-principal img {
+    width: 100%;
     max-width: 420px;
+    display: block;
     margin: 0 auto;
     border-radius: 16px;
 }
@@ -27,3 +29,4 @@
     text-align: center;
     font-style: italic;
 }
+
