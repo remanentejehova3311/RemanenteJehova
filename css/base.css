@@ -57,3 +57,13 @@ ul {
 li {
     margin-bottom: 0.75rem;
 }
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    max-width: 100%;
+}
