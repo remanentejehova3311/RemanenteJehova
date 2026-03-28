@@ -26,8 +26,6 @@ jobs:
 
           BASE_URL="https://remanentejehova3311.github.io/RemanenteJehova"
 
-          echo "<url><loc>$BASE_URL/</loc></url>" >> sitemap.xml
-
           for file in $(find . -name "*.html" \
             -not -path "./.git/*" \
             -not -path "./partials/*" \
@@ -35,7 +33,11 @@ jobs:
             
             url=$(echo $file | sed 's|^\./||')
 
-            echo "<url><loc>$BASE_URL/$url</loc></url>" >> sitemap.xml
+            if [[ "$url" == "index.html" ]]; then
+              echo "<url><loc>$BASE_URL/</loc></url>" >> sitemap.xml
+            else
+              echo "<url><loc>$BASE_URL/$url</loc></url>" >> sitemap.xml
+            fi
           done
 
           echo '</urlset>' >> sitemap.xml
