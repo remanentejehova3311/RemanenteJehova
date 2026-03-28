@@ -39,31 +39,32 @@
     display: flex;
     overflow-x: auto;
     gap: 1rem;
-    padding: 20px 10px;
+    padding: 15px;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
   }
 
   .panel {
     flex: 0 0 85%;
     height: 240px;
-    border-radius: 18px;
+    margin: 0;
+    border-radius: 16px;
+
     scroll-snap-align: center;
-    scroll-snap-stop: always;
 
-    background-size: cover;
-    background-position: center;
+    flex-grow: 0 !important;
 
-    transition: transform 0.3s ease;
+    opacity: 0.5;
+    transform: scale(0.92);
+    transition: all 0.3s ease;
   }
 
-  /* efecto táctil */
-  .panel:active {
-    transform: scale(0.96);
+  .panel.active {
+    flex: 0 0 85% !important;
   }
 
-  /* ocultar scrollbar */
-  .container__images::-webkit-scrollbar {
-    display: none;
+  .panel.active-mobile {
+    opacity: 1;
+    transform: scale(1);
   }
+
 }
