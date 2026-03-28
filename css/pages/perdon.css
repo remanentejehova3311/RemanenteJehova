@@ -34,23 +34,36 @@
 ======================================== */
 
 @media (max-width: 768px) {
+
   .container__images {
-    flex-direction: column;
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
   .panel {
-    height: 50vh;
-    background-position: center center;
+    flex: 0 0 85%;
+    height: 240px;
+    border-radius: 18px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.3s ease;
   }
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
+  /* efecto táctil */
+  .panel:active {
+    transform: scale(0.96);
+  }
+
+  /* ocultar scrollbar */
+  .container__images::-webkit-scrollbar {
     display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .panel {
-    height: 40vh;
   }
 }
